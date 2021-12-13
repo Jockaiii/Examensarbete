@@ -8,13 +8,15 @@ import { EventsComponent } from './components/events/events.component';
 import { EventItemComponent } from './components/event-item/event-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './views/about/about.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { HomeComponent } from './views/home/home.component';
 import { WhiskeyInventoryComponent } from './views/whiskey-inventory/whiskey-inventory.component';
 import { LoginComponent } from './views/login/login.component';
+import { TextComponent } from './components/text/text.component';
+import { PasswordComponent } from './components/password/password.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,14 @@ import { LoginComponent } from './views/login/login.component';
     EventItemComponent,
     NavbarComponent,
     HomeComponent,
-    WhiskeyInventoryComponent
+    WhiskeyInventoryComponent,
+    LoginComponent,
+    TextComponent,
+    PasswordComponent,
 
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
