@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  myfunction() 
+  showHamburgermenu() 
 		{
 		  var x = document.getElementById("myTopnav")!;
 		  if (x.className === "navbar") 
