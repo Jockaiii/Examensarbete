@@ -1,12 +1,17 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+// Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ButtonComponent } from './components/button/button.component';
 import { EventsComponent } from './components/events/events.component';
 import { EventItemComponent } from './components/event-item/event-item.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './views/about/about.component';
@@ -16,7 +21,6 @@ import { WhiskeyInventoryComponent } from './views/whiskey-inventory/whiskey-inv
 import { LoginComponent } from './views/login/login.component';
 import { TextComponent } from './components/text/text.component';
 import { PasswordComponent } from './components/password/password.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,8 +50,8 @@ import { FormsModule } from '@angular/forms';
       {path: 'views/login', component: LoginComponent},
       {path: '', redirectTo: 'views/home', pathMatch: 'full'},
       {path: '**', redirectTo: 'views/home', pathMatch: 'full'},
-
     ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

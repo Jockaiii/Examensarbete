@@ -15,5 +15,4 @@ export class EventItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

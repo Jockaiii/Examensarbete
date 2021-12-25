@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { USERS } from '../../mock-users'
+import { ACCOUNTS } from '../../mock-accounts'
 
 @Component({
   selector: 'app-login',
@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
   login(){
     console.log("login");
 
-    USERS.forEach(user => {
-      console.log(user)
+    ACCOUNTS.forEach(account => {
+      console.log(account)
       //if(user.name === )
     });
   }
