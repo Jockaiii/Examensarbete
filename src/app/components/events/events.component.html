@@ -1,1 +1,5 @@
-<app-event-item *ngFor="let event of events" [event]="event"></app-event-item>
+<app-event-item 
+*ngFor="let event of events" 
+[event]="event" 
+(onDeleteEvent)="deleteEvent(event)"
+></app-event-item>

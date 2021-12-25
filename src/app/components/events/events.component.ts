@@ -15,4 +15,12 @@ export class EventsComponent implements OnInit {
   ngOnInit(): void {
     this.eventService.getEvents().subscribe((events) => (this.events = events));
   }
+
+  deleteEvent(event: Event){
+    this.eventService
+    .deleteEvent(event)
+    .subscribe(
+      () => (this.events = this.events.filter((e) => e.id !== event.id))
+      );
+  }
 }
