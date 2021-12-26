@@ -3,6 +3,10 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Event} from '../Event';
 
+const httpOptions = { headers: new HttpHeaders({
+  'Content-Type': 'application/json'
+})}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,5 +22,10 @@ export class EventService {
   deleteEvent(event: Event): Observable<Event> {
     const url = `${this.apiUrl}/${event.id}`;
     return this.http.delete<Event>(url);
+  }
+
+  updateEventReminder(event: Event): Observable<Event> {
+    const url = `${this.apiUrl}/${event.id}`;
+    return this.http.put<Event>(url, event, httpOptions)
   }
 }

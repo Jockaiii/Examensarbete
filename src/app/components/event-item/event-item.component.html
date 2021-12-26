@@ -1,4 +1,4 @@
-<div class="event">
+<div [ngClass]="{reminder: event.reminder}" class="event" (dblclick)="toggleReminder(event)">
 	<h3>{{event.text}} 
 		<fa-icon 
 			(click)="deleteEvent(event)" 

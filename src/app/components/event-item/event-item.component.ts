@@ -10,6 +10,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class EventItemComponent implements OnInit {
   @Input() event!: Event;
   @Output() onDeleteEvent: EventEmitter<Event> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Event> = new EventEmitter();
   faTimes = faTimes;
 
   constructor() { }
@@ -19,5 +20,9 @@ export class EventItemComponent implements OnInit {
 
   deleteEvent(event: Event){
     this.onDeleteEvent.emit(event);
+  }
+
+  toggleReminder(event: Event){
+    this.onToggleReminder.emit(event)
   }
 }

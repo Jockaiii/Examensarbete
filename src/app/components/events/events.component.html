@@ -2,4 +2,5 @@
 *ngFor="let event of events" 
 [event]="event" 
 (onDeleteEvent)="deleteEvent(event)"
+(onToggleReminder)="toggleReminder(event)"
 ></app-event-item>

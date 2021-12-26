@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../../services/event.service';
 import {Event} from '../../Event';
+import { takeLast } from 'rxjs';
 
 @Component({
   selector: 'app-events',
@@ -22,5 +23,10 @@ export class EventsComponent implements OnInit {
     .subscribe(
       () => (this.events = this.events.filter((e) => e.id !== event.id))
       );
+  }
+
+  toggleReminder(event: Event){
+    event.reminder = !event.reminder;
+    this.eventService.updateEventReminder(event).subscribe();
   }
 }
