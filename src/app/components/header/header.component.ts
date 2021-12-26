@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   title: string = 'Examensarbete';
-  showAddEvent: boolean = true;
+  showAddEvent: boolean = false;
   subscription!: Subscription;
 
   constructor(private uiService: UiService) {
