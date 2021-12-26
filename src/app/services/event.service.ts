@@ -28,4 +28,8 @@ export class EventService {
     const url = `${this.apiUrl}/${event.id}`;
     return this.http.put<Event>(url, event, httpOptions)
   }
+
+  addEvent(event: Event) {
+  return this.http.post<Event>(this.apiUrl, event, httpOptions);
+  }
 }

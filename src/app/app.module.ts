@@ -21,6 +21,7 @@ import { WhiskeyInventoryComponent } from './views/whiskey-inventory/whiskey-inv
 import { LoginComponent } from './views/login/login.component';
 import { TextComponent } from './components/text/text.component';
 import { PasswordComponent } from './components/password/password.component';
+import { AddTaskComponent } from './components/add-task/add-task.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PasswordComponent } from './components/password/password.component';
     LoginComponent,
     TextComponent,
     PasswordComponent,
+    AddTaskComponent,
 
   ],
   imports: [
