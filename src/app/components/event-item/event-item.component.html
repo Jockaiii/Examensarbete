@@ -1,10 +1,16 @@
-<div [ngClass]="{reminder: event.reminder}" class="event" (dblclick)="toggleReminder(event)">
-	<h3>{{event.text}} 
-		<fa-icon 
-			(click)="deleteEvent(event)" 
-			[ngStyle]="{color: 'red'}" 
-			[icon]="faTimes">
-		</fa-icon>
-	</h3>
-	<p>{{event.day}}</p>
+<div
+    [ngClass]="{ reminder: event.reminder }"
+    class="event"
+    (dblclick)="toggleReminder(event)"
+>
+    <h3>
+        {{ event.text }}
+        <fa-icon
+            (click)="deleteEvent(event)"
+            [ngStyle]="{ color: 'red' }"
+            [icon]="faTimes"
+        >
+        </fa-icon>
+    </h3>
+    <p>{{ event.day }}</p>
 </div>

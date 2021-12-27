@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 // Components
@@ -24,38 +24,40 @@ import { PasswordComponent } from './components/password/password.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ButtonComponent,
-    EventsComponent,
-    EventItemComponent,
-    NavbarComponent,
-    HomeComponent,
-    WhiskeyInventoryComponent,
-    LoginComponent,
-    TextComponent,
-    PasswordComponent,
-    AddTaskComponent,
-
-  ],
-  imports: [
-    FormsModule,
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    RouterModule.forRoot([
-      {path: 'views/home', component: HomeComponent},
-      {path: 'views/whiskey-inventory', component: WhiskeyInventoryComponent},
-      {path: 'views/about', component: AboutComponent},
-      {path: 'views/contact', component: ContactComponent},
-      {path: 'views/login', component: LoginComponent},
-      {path: '', redirectTo: 'views/home', pathMatch: 'full'},
-      {path: '**', redirectTo: 'views/home', pathMatch: 'full'},
-    ]),
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        ButtonComponent,
+        EventsComponent,
+        EventItemComponent,
+        NavbarComponent,
+        HomeComponent,
+        WhiskeyInventoryComponent,
+        LoginComponent,
+        TextComponent,
+        PasswordComponent,
+        AddTaskComponent,
+    ],
+    imports: [
+        FormsModule,
+        BrowserModule,
+        AppRoutingModule,
+        FontAwesomeModule,
+        RouterModule.forRoot([
+            { path: 'views/home', component: HomeComponent },
+            {
+                path: 'views/whiskey-inventory',
+                component: WhiskeyInventoryComponent,
+            },
+            { path: 'views/about', component: AboutComponent },
+            { path: 'views/contact', component: ContactComponent },
+            { path: 'views/login', component: LoginComponent },
+            { path: '', redirectTo: 'views/home', pathMatch: 'full' },
+            { path: '**', redirectTo: 'views/home', pathMatch: 'full' },
+        ]),
+        HttpClientModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

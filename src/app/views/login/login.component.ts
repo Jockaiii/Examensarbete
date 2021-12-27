@@ -1,24 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { ACCOUNTS } from '../../mock-accounts'
+import { ACCOUNTS } from '../../mock-accounts';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+    constructor() {}
 
-  constructor() { }
+    ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
+    login() {
+        console.log('login');
 
-  login(){
-    console.log("login");
-
-    ACCOUNTS.forEach(account => {
-      console.log(account)
-      //if(user.name === )
-    });
-  }
+        ACCOUNTS.forEach((account) => {
+            console.log(account);
+            //if(user.name === )
+        });
+    }
 }

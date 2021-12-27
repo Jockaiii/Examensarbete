@@ -1,17 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-text',
-  templateUrl: './text.component.html',
-  styleUrls: ['./text.component.css']
+    selector: 'app-text',
+    templateUrl: './text.component.html',
+    styleUrls: ['./text.component.css'],
 })
 export class TextComponent implements OnInit {
-  @Input() name: string;
+    @Input() name: string;
 
-  constructor() { 
-    this.name = "";
-  }
+    constructor() {
+        this.name = '';
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {}
 }
