@@ -6,6 +6,6 @@ export interface Account {
 }
 
 export enum AccountType {
-    User,
+    user,
     admin,
 }

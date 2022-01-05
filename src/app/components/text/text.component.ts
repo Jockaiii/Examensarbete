@@ -6,11 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
     styleUrls: ['./text.component.css'],
 })
 export class TextComponent implements OnInit {
-    @Input() name: string;
+    @Input() name: string = '';
 
-    constructor() {
-        this.name = '';
-    }
+    constructor() {}
 
     ngOnInit(): void {}
 }

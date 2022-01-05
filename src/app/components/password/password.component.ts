@@ -6,11 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
     styleUrls: ['./password.component.css'],
 })
 export class PasswordComponent implements OnInit {
-    @Input() name: string;
+    @Input() name: string = '';
 
-    constructor() {
-        this.name = '';
-    }
+    constructor() {}
 
     ngOnInit(): void {}
 }

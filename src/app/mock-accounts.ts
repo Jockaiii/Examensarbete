@@ -11,6 +11,6 @@ export const ACCOUNTS: Account[] = [
         id: 2,
         name: 'Kristoffer',
         password: 'abc',
-        accountType: AccountType.User,
+        accountType: AccountType.user,
     },
 ];
